@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Página Inícial";
+}
+
+<div class="jumbotron">
+    <h1>Transportadora Evolution</h1>
+</div>
+
+@if (TempData["Message"] != null) {
+    <div class="row">
+        <div class="col-md-4">
+            <h2 style="color:red;">@TempData["Message"]</h2>
+        </div>
+    </div>
+}
+else {
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Projeto Criado com ASP.NET MVC, Entity FrameWork Code First, Migrations, Bootstrap and Jquery</h2>
+        </div>
+    </div>
+}

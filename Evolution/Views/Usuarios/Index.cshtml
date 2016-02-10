@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Usuários";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts {
+    <script src="~/Scripts/App/CrudUsuarioApp.js"></script>
+}
+
+@section styles{
+    <style>
+        body {
+            margin: 50px;
+        }
+    </style>
+}
+
+<section id="conteudo" class="container">
+    <!-- Usando as classes css do Bootstrap -->
+    <div class="form-horizontal">
+        <h4>Usuários</h4>
+        <hr />
+        <section id="formulario">
+            <!-- Formulário responsável por adicionar e atualizar pessoas -->
+            <form action="/" method="post" id="formDados">
+
+                <!-- usamos este tipo hidden para armazenar nosso Id -->
+                <input type="hidden" name="UsuarioID" id="UsuarioID" />
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="Descrição">Nome</label>
+                    <div class="col-md-10">
+                        <input type="text" id="Nome" class="form-control" name="Nome" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <!-- função onclick virá do nosso arquivo javascript na proxima etapa -->
+                        <input type="button" id="salvar" value="Salvar" class="btn btn-success" onclick="Cadastrar()" />
+                        <input type="button" id="atualizar" value="Atualizar" class="btn btn-info hidden" onclick="Atualizar()" />
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</section>
+
+<section id="listagem">
+    <table class="table hidden" id="tabela">
+        <thead>
+            <tr>
+                <th>UsuarioID</th>
+                <th>Nome</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+</section>

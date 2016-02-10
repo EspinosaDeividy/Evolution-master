@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Transportadora Evolution</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
+    <link href="~/Content/bootstrap-progressbar-3.0.0.css" rel="stylesheet" />
+
+    <style>
+        .six-sec-ease-in-out {
+            -webkit-transition: width 6s ease-in-out;
+            -moz-transition: width 6s ease-in-out;
+            -ms-transition: width 6s ease-in-out;
+            -o-transition: width 6s ease-in-out;
+            transition: width 6s ease-in-out;
+        }
+    </style>
+    
+
+    @RenderSection("styles", false)
+</head>
+<body>
+
+    <div class="btn-group" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <ul>
+                <li class="btn btn-default dropdown-toggle">@Html.ActionLink("Início", "Index", "Home")</li>
+            </ul>
+        </div>
+
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Transportadoras
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Cadastro", "Index", "Transportadoras")</li>
+                <li>@Html.ActionLink("Busca Simples", "SearchList", "Transportadoras")</li>
+                @*<li>@Html.ActionLink("",)</li>Redirecionar para a pagina de filtro*@
+                <li>@Html.ActionLink("Classificações", "Index", "Classificacao")</li>
+                <li>@Html.ActionLink("ProgressBar", "ProgressBar", "Transportadoras")</li>
+            </ul>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Usuários
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Cadastro", "Index", "Usuarios")</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Transportadora Evolution</p>
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <script src="~/Scripts/bootstrap-progressbar.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        //$('.progress .progress-bar').progressbar({ display_text: 'center', use_percentage: true, amount_format: function (p, t) { return p + ' of ' + t; } });
+        $('.progress .progress-bar').progressbar({ display_text: 'center'});
+    });
+    </script>
+
+    @RenderSection("scripts", false)
+</body>
+</html>

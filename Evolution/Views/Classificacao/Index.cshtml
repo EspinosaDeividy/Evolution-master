@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Classificações";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts {
+    <script src="~/Scripts/App/CrudClassificacaoApp.js"></script>
+}
+@section styles{
+    <style>
+        body {
+            margin: 50px;
+        }
+    </style>
+}
+<section id="conteudo" class="container">
+    <!-- Usando as classes css do Bootstrap -->
+    <div class="form-horizontal">
+        <h4>Classificacao</h4>
+        <hr />
+        <section id="formulario">
+            <!-- Formulário responsável por adicionar e atualizar pessoas -->
+            <form action="/" method="post" id="formDados">
+                <!-- usamos este tipo hidden para armazenar nosso Id -->
+                <input type="hidden" name="ClassificacaoID" id="ClassificacaoID" />
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="Descrição">Descrição</label>
+                    <div class="col-md-10">
+                        <input type="text" id="Descricao" class="form-control" name="Descricao" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <!-- função onclick virá do nosso arquivo javascript na proxima etapa -->
+                        <input type="button" id="salvar" value="Salvar" class="btn btn-success" onclick="Cadastrar()" />
+                        <input type="button" id="atualizar" value="Atualizar" class="btn btn-info hidden" onclick="Atualizar()" />
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</section>
+
+<div class="progress">
+    <div class="progress-bar progress-bar-info six-sec-ease-in-out" role="progressbar" data-transitiongoal="100"></div>
+</div>
+
+<section id="listagem">
+    <table class="table hidden" id="tabela">
+        <thead>
+            <tr>
+                <th>ClassificacaoID</th>
+                <th>Descricao</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+</section>
