@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ModelsEvolution\ModelsEvolution.csproj">
-      <Project>{7e6993e7-4d9f-4b89-8f17-b8d878e16ceb}</Project>
-      <Name>ModelsEvolution</Name>
+    <ProjectReference Include="..\DataEvolution\DataEvolution.csproj">
+      <Project>{73b1ac81-0cef-448d-abe8-40edbec7e41d}</Project>
+      <Name>DataEvolution</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

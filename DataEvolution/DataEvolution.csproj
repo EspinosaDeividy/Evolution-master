@@ -49,22 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexto.cs" />
+    <Compile Include="Data\Classificacao.cs" />
+    <Compile Include="dbContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Classificacao.cs" />
+    <Compile Include="Models\Transportadoras.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ModelsEvolution\ModelsEvolution.csproj">
-      <Project>{7e6993e7-4d9f-4b89-8f17-b8d878e16ceb}</Project>
-      <Name>ModelsEvolution</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web.Config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

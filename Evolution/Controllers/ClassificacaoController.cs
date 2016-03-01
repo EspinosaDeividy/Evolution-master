@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Threading;
-using System.Web;
 using System.Web.Mvc;
 using Evolution.Models;
 
@@ -14,6 +11,7 @@ namespace Evolution.Controllers {
         private BancoTransportadoras db = new BancoTransportadoras();
 
         public ActionResult Index() {
+
             return View(db.Classificacao.ToList());
         }
 
