@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Evolution.Models {
+namespace DataEvolution.Models {
 
     [Table("Classificacao")]
     public class Classificacao {

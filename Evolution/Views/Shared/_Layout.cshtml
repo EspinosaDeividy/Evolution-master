@@ -6,7 +6,7 @@
     <title>@ViewBag.Title - Transportadora Evolution</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    
+
     <link href="~/Content/bootstrap-progressbar-3.0.0.css" rel="stylesheet" />
 
     <style>
@@ -18,7 +18,7 @@
             transition: width 6s ease-in-out;
         }
     </style>
-    
+
 
     @RenderSection("styles", false)
 </head>
@@ -68,10 +68,13 @@
     <script src="~/Scripts/bootstrap-progressbar.js"></script>
 
     <script type="text/javascript">
-    $(document).ready(function () {
-        //$('.progress .progress-bar').progressbar({ display_text: 'center', use_percentage: true, amount_format: function (p, t) { return p + ' of ' + t; } });
-        $('.progress .progress-bar').progressbar({ display_text: 'center'});
-    });
+        $(document).ready(function () {
+            //$('.progress .progress-bar').progressbar({ display_text: 'center', use_percentage: true, amount_format: function (p, t) { return p + ' of ' + t; } });
+            //$('.progress .progress-bar').progressbar({ display_text: 'center' });
+            //$('.progress .progress-bar').progressbar({ display_text: 'center', use_percentage: true, transition_delay: 300, refresh_speed: 50, });
+
+
+        });
     </script>
 
     @RenderSection("scripts", false)

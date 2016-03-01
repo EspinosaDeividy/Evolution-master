@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using Evolution.Models;
@@ -39,6 +40,11 @@ namespace Evolution.Controllers {
                         return Json(false);
                     }
                 }
+
+                for (int i = 0; i < 10; i++) {
+                    Thread.Sleep(1000);
+                }
+
                 db.Classificacao.Add(classificacao);
                 db.SaveChanges();
             }
